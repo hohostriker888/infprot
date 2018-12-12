@@ -12,7 +12,7 @@ public class RSA {
         FileWriter writer = new FileWriter(file);
 
         int p = 3;
-        int q = 7;
+        int q = 11;
         writer.write("Выбраны p и q, равные: " + p + " и " + q + "\n\r");
 
         int n = p * q;
