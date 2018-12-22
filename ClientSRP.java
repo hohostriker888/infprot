@@ -11,7 +11,7 @@ public class ClientSRP {
         ServerSRP serverSRP = new ServerSRP();
         serverSRP.k = BigInteger.valueOf(3);
         serverSRP.N = BigInteger.valueOf(2039);
-        //serverSRP.I = "useadmin";
+        serverSRP.I = "useadmin";
         //
         serverSRP.p = "p66w0r3";
         System.out.println("Введите случайную строку");
@@ -30,7 +30,7 @@ public class ClientSRP {
         System.out.println("Клиент вычислил A = " + A);
         System.out.println("Введите логин");
         String I = in.nextLine();
-        serverSRP.I = I;
+        serverSRP.I1 = I;
         serverSRP.A = A;
         System.out.println("Сервер принял I, A");
         if (serverSRP.A == BigInteger.valueOf(0)) {
@@ -117,6 +117,7 @@ class ServerSRP{
     BigInteger N;
     BigInteger x;
     String I;
+    String I1;
     String p;
     String p1;
     String s;
